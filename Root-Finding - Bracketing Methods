@@ -1,0 +1,37 @@
+// Root-finding - Bracketing methods
+#include "stdafx.h"
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+	float a;
+	cout << "enter first number:" << endl;
+	cin >> a;
+	float b;
+	cout << "enter second number:" << endl;
+	cin >> b;
+	float E;
+	cout << "enter E:" << endl;
+	cin >> E;
+	int i = 0;
+	float x[10000];
+	x[0]=0;
+	float fa = 0, fb = 0,fx=0;
+	while (fabs(x[i] - x[i - 1]) >= E) {
+		i++;
+		fa = 2 * sin(a) + a - 2;
+		fb = 2 * sin(b) + b - 2;
+		x[i] =(a*fb-b*fa)/(fb-fa);
+		fx= 2 * sin(x[i]) + x[i] - 2;
+		if (fa*fx<0) {
+			b = x[i];
+		}
+		else {
+			a = x[i];
+		}
+	}
+	cout<<"Root:"<< x[i]<<endl;
+    return 0;
+}
+
