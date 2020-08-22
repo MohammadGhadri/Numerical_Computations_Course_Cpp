@@ -1,31 +1,35 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2011
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1.1", "1.1\1.1.vcxproj", "{0696B917-977A-46DC-94FE-D778DBD40E48}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0696B917-977A-46DC-94FE-D778DBD40E48}.Debug|x64.ActiveCfg = Debug|x64
-		{0696B917-977A-46DC-94FE-D778DBD40E48}.Debug|x64.Build.0 = Debug|x64
-		{0696B917-977A-46DC-94FE-D778DBD40E48}.Debug|x86.ActiveCfg = Debug|Win32
-		{0696B917-977A-46DC-94FE-D778DBD40E48}.Debug|x86.Build.0 = Debug|Win32
-		{0696B917-977A-46DC-94FE-D778DBD40E48}.Release|x64.ActiveCfg = Release|x64
-		{0696B917-977A-46DC-94FE-D778DBD40E48}.Release|x64.Build.0 = Release|x64
-		{0696B917-977A-46DC-94FE-D778DBD40E48}.Release|x86.ActiveCfg = Release|Win32
-		{0696B917-977A-46DC-94FE-D778DBD40E48}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {65C5FDA5-62FB-462B-A514-8D44C48BD223}
-	EndGlobalSection
-EndGlobal
+
+// Interpolation
+#include <iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	float a;
+	cout << "enter first number:" << endl;
+	cin >> a;
+	float b;
+	cout << "enter second number:" << endl;
+	cin >> b;
+	float E;
+	cout << "enter E:" << endl;
+	cin >> E;
+	float x=(a+b)/2, fx=0, fa=0 ;
+	float oldm = 0;
+	while (fabs(x - oldm) >= E) {
+		oldm=x ;
+		fx = (x*x*x) + (x*x) - 10;
+		fa = (a*a*a) + (a*a) - 10;
+		if (fx*fa < 0) {
+			b = x;
+		}
+		else {
+			a = x;
+		}
+		x = (a + b) / 2;
+	}
+	cout<<"root:"<< x <<endl;
+    return 0;
+}
+
