@@ -1,0 +1,23 @@
+// Root-Finding - Newton's Method
+#include "stdafx.h"
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+	float E;
+	cout << "enter E:" << endl;
+	cin >> E;
+	float x[10000];
+	cout << "enter X'0:" << endl;
+	cin>>x[0];
+	int i = 0;
+	while (fabs(x[i] - x[i - 1]) >= E) {
+		i++;
+		x[i] = x[i-1]-((sin (x[i-1])- (x[i-1]/2))/(cos(x[i-1])-1/2));
+	}
+	cout << "root:" << x[i] << endl;
+	return 0;
+}
+
+
+
