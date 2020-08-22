@@ -1,4 +1,5 @@
 // Root-Finding - Newton's Method
+
 #include "stdafx.h"
 #include <iostream>
 #include <cmath>
