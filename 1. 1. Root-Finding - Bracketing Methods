@@ -1,4 +1,4 @@
-// Root-finding - Bracketing methods
+// Root-Finding - Bracketing Methods
 
 #include "stdafx.h"
 #include<iostream>
