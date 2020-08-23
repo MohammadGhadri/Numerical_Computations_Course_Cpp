@@ -12,7 +12,7 @@ int main()
 	cin >> a;
 	cout << "Enter second Number;" << endl;
 	cin >> b;
-	cout << "Enter An Even Number;" << endl;
+	cout << "Enter an even Number;" << endl;
 	cin >> n;
 	while (n % 2 == 1) {
 		cout << "Please,Enter An <<Even>> Number;" << endl;
