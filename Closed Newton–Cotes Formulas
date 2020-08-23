@@ -1,0 +1,30 @@
+// Closed Newton–Cotes Formulas for numerical integration
+
+#include "stdafx.h"
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main() {
+	float a /*= 0*/, b /*= 1*/, h, n, x, sum=0;
+	cout << "enter first number" << endl;
+	cin>> a;
+	cout << "enter second number" << endl;
+	cin>> b;
+	cout<<"enter a number for n:"<<endl;
+	cin >> n;
+	h = (b - a) / n;
+	for (int i = 0; i <= n; i++) {
+		x = a + (i*h);
+		if (i > 0 && i < n) {
+			sum += 2*((h / 2)*(1 + exp(-x)*sin(4 * x)));
+		}
+		else if (i == 0) {
+			sum += (h / 2)*(1 + exp(-x)*sin(4 * x));
+		}
+		else {
+			sum += (h / 2)*(1 + exp(-x)*sin(4 * x));
+		}
+	}
+	cout << sum << endl;
+	return 0;
+}
