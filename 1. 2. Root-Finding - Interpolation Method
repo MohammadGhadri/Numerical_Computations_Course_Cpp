@@ -1,4 +1,4 @@
-// Interpolation
+//  Root-Finding - Interpolation Methods
 
 #include <iostream>
 #include<cmath>
