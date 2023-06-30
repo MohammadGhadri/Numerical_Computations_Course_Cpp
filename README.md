@@ -1,4 +1,4 @@
-# Numerical_Computations_Course
+# Numerical Computations Course
 I did a few projects for the Numerical Computations course using C++. Project’s title: Formula modelling and solving relevant issues by using Visual Studio Software.
 
 The projects' source code are provided and the subject are:
