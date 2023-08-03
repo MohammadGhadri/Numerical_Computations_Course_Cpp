@@ -1,3 +1,8 @@
+desktop.ini
+~*.pptx
+~*.docx
+~*.xlsx
+#######################################
 # Prerequisites
 *.d
 
